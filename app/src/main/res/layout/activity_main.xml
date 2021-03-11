@@ -43,16 +43,17 @@
 
     <TextView
         android:id="@+id/tv_output"
-        android:layout_width="344dp"
-        android:layout_height="32dp"
+        android:layout_width="343dp"
+        android:layout_height="268dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
         android:layout_marginTop="24dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:gravity="center_horizontal|center_vertical"
+        android:maxLines="1"
         android:textColor="@color/green"
-        android:textSize="24sp"
+        android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.49"
         app:layout_constraintStart_toStartOf="parent"
@@ -72,9 +73,11 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_Header">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/inputField"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/HintText1" />
+            android:hint="@string/HintText1"
+            android:inputType="numberSigned" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
