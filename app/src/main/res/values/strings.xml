@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">einzelbeispiel</string>
+    <string name="app_name">Einzelbeispiel</string>
+    <string name="HeaderText1">Network-Connector</string>
+    <string name="HeaderText2">Response:</string>
+    <string name="HintText1">Enter a University-ID</string>
+    <string name="Btn_Text">Send</string>
+    <string name="Btn2_Text">Calculate</string>
 </resources>
