@@ -28,12 +28,12 @@ public class MainActivity extends AppCompatActivity {
         EditText inputText = (EditText) findViewById(R.id.inputField);
         Button btn1 = findViewById(R.id.btn);
         Button btn2 = findViewById(R.id.btn2);
-
+        //TCP
         btn1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 TCPconnector connectorInstance = new TCPconnector(inputText.getText().toString());
-                System.out.println("TEXT!!!:" + inputText.getText().toString());
+                System.out.println("Text:" + inputText.getText().toString());
                 connectorInstance.start();
                 try {
                     connectorInstance.join();
@@ -43,10 +43,24 @@ public class MainActivity extends AppCompatActivity {
                 et.setText(connectorInstance.output);
             }
         });
-
+        //Aufabe 2
         btn2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
+                String str = inputText.getText().toString();
+                char[] ca = str.toCharArray();
+                StringBuilder sb = new StringBuilder();
+                int digit=1;
+                for(char c : ca){
+                    if (digit % 2 == 0 && c!='0') { //c!='0' weil in der Angabe a=1 definiert war
+                        int newCharVal = (int)c+48;
+                        sb.append((char) newCharVal);
+                    }else{
+                        sb.append(c);
+                    }
+                    digit++;
+                }
+                et.setText(sb.toString());
 
             }
         });
